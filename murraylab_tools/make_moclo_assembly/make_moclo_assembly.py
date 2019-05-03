@@ -34,6 +34,7 @@ enzymelist = [BsaI,BbsI,AarI,Esp3I]
 enzymes = {str(a):a for a in enzymelist}
 enlist = [str(a) for a in enzymelist]+["gibson"]
 #the following defines the overhangs in our library!
+#overhangs for the EcoFlex kit are added
 ENDDICT = { \
 "GGAG":"A", \
 "TACT":"B", \
@@ -42,7 +43,16 @@ ENDDICT = { \
 "GCTT":"E", \
 "CGCT":"F", \
 "TGCC":"G", \
-"ACTA":"H" \
+"ACTA":"H", \           
+"CTAT":"Eco_A", \
+"GTAC":"Eco_B", \
+"CATA":"Eco_C", \
+"TTCT":"Eco_D", \
+"TCGA":"Eco_E", \
+"TGTT":"Eco_F", \
+"ATCT":"Eco_G", \
+"TGCC":"Eco_H", \
+"CCGG":"Eco_I", \
 }
 #have a dictionary of the reverse complement too
 rcENDDICT = {str(Dseq(a).rc()):ENDDICT[a] for a in ENDDICT}
